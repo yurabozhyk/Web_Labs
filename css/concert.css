@@ -28,7 +28,6 @@ li {
   animation-name: header-li-animation;
   animation-duration: .8s;
   animation-delay: 0.5s;
-
 }
 
 nav li a {
@@ -122,41 +121,65 @@ nav a:hover, .dropdown:hover .dropbtn .dropdown-content a:hover {
   padding: 3px;
 }
 
-img:hover {
-  animation-name: img-scale;
-  animation-duration: 1s;
-  animation-fill-mode: backwards;
-  animation-timing-function: ease-in-out;
-}
-
-.bio {
-  max-width: 870px;
-  margin: auto;
-  text-align: justify;
-  font-family: "Schoolbell", cursive;
-  font-size: 25px;
-  color: #1c2938;
-}
-
-.album {
-  height: 430px;
-  width: 60%;
+.map-img {
+  padding: 5px;
   display: flex;
-  justify-content: space-around;
-  align-items: center;
-  margin: auto;
+  justify-content: center;
 }
 
-.album-text {
+.upcoming-concert {
+  text-align: center;
+  font-size: 60px;
+  color: #1c2938;
+  font-family: "Schoolbell", cursive;
+}
+
+.concert-info {
+  text-align: center;
+  font-size: 40px;
+  font-weight: bold;
+  color: #1c2938;
+  font-family: "Schoolbell", cursive;
+}
+
+.concert-contacts {
+  color: #1c2938;
+  font-size: 20px;
   text-align: center;
   font-family: "Schoolbell", cursive;
+}
+
+.buy-button {
+  border: none;
+  border-radius: 5px;
+  margin-top: 30px;
+  padding: 20px;
+  color: #ff9c91;
+  background-color: #1c2938;
   font-size: 50px;
-  color: #1c2938;
+  font-family: "Schoolbell", cursive;
+  text-align: center;
+  text-decoration: none;
+  transition-duration: 0.5s;
+  cursor: pointer;
+}
+
+.buy-button:hover {
+  color: #ffd5c9;
+  border-radius: 40px;
+}
+
+a {
+  text-decoration: none;
+  color: #cd3f3e;
+}
+
+a:hover {
+  color: #d95c5b;
 }
 
 footer {
   margin-top: 40px;
-  flex: 0 0 auto;
   text-align: center;
   background-color: #1c2938;
   font-family: "Schoolbell", cursive;
@@ -167,11 +190,6 @@ footer {
 .copyright {
   padding: 10px;
   margin-block-end: 0em;
-}
-
-.album-img {
-  width: 430px;
-  height: 430px;
 }
 
 @keyframes logo-animation {
@@ -190,7 +208,7 @@ footer {
         transform: scale(1);
     }
     50% {
-        transform: scale(0.8);
+        transform: scale(1.5);
     }
     to {
         transform: scale(1);
@@ -218,9 +236,3 @@ footer {
       transform: translateX();
     }
 }
-
-/* color: #ff9f85; */
-/* color: #cd3f3e; */
-/* font-family: 'Gloria Hallelujah', cursive; */
-/* font-family: 'Gochi Hand', cursive; */
-/* font-family: 'Kalam', cursive; */
