@@ -1,34 +1,39 @@
 body {
   background-color: #ff9c91;
-  margin: 0;
-}
-
-header {
-  position: absolute;
-  width: 100%;
-  align-items: center;
-}
-
-nav {
-  height: 85px;
-  background-color: #1c2938;
+  margin: auto 50px;
   font-family: "Schoolbell", cursive;
 }
 
-ul {
+/* header {
+  position: absolute;
+  width: 100%;
+  align-items: center;
+} */
+p {
+  text-align: justify;
+}
+
+nav {
+  background-color: #1c2938;
+}
+
+h3 {
+  text-align: center;
+  color: #1c2938;
+  font-size: 50px;
+}
+
+/* ul {
   margin: 0;
   padding: 0;
   display: flex;
   list-style: none;
   justify-content: center;
-}
-
+} */
 li {
   font-size: 40px;
   animation-name: header-li-animation;
   animation-duration: .8s;
-  animation-delay: 0.5s;
-
 }
 
 nav li a {
@@ -41,14 +46,13 @@ nav li a {
   color: #ff9c91;
 }
 
-main {
-  padding-top: 85px;
+a:hover {
+  text-decoration: none;
 }
 
 .dropdown  {
   display: block;
   float: left;
-  font-size: 40px;
   vertical-align: middle;
   padding: 14px 16px;
   min-width: 120px;
@@ -56,28 +60,19 @@ main {
   text-align: center;
 }
 
-.logo {
-  left: 0;
-  position: absolute;
-  opacity: 0;
+.navbar-brand {
+  padding: 21.5px;
+  min-width: 120px;
+  text-decoration: none;
+  text-align: center;
+  font-size: 30px;
+  color: #ff9c91;
   animation-name: logo-animation;
   animation-fill-mode: both;
   animation-duration: .8s;
-  animation-delay: 0.5s;
 }
 
-.admin {
-  right: 0;
-  position: absolute;
-  opacity: 0;
-  animation-name: admin-animation;
-  animation-fill-mode: both;
-  animation-duration: .8s;
-  animation-delay: 0.5s;
-}
-
-
-.dropdown .dropbtn {
+/* .dropdown .dropbtn {
   font-size: 30px;
   border: none;
   color: #ff9c91;
@@ -85,36 +80,33 @@ main {
   background-color: inherit;
   font-family: inherit;
   margin: 0;
-}
+} */
 
-nav a:hover, .dropdown:hover .dropbtn .dropdown-content a:hover {
+nav a:hover, .dropdown:hover .dropbtn  {
   color: #ffd5c9;
 }
 
-.dropdown-content {
-  display: none;
-  position: absolute;
+.dropdown-menu {
   background-color: #1c2938;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
 }
 
-.dropdown-content a {
-  float: none;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-  text-align: center;
+.dropdown-menu a {
+  text-align: left;
   color: #ff9c91;
 }
 
-.dropdown:hover .dropdown-content {
+.dropdown-menu a:hover {
+  color: #ffd5c9;
+  background-color: inherit;
+}
+
+.dropdown:hover .dropdown-menu {
   display: block;
 }
 
-* {
+/* * {
   box-sizing: border-box;
-}
+} */
 
 .img-content {
   float: left;
@@ -130,15 +122,31 @@ img:hover {
 }
 
 .bio {
-  max-width: 870px;
   margin: auto;
   text-align: justify;
-  font-family: "Schoolbell", cursive;
   font-size: 25px;
   color: #1c2938;
 }
 
-.album {
+.album-name {
+  display: block;
+  width: 50%;
+  float: left;
+  margin: 0;
+}
+
+.album-logo {
+  display: block;
+  width: 50%;
+  margin: 0px;
+  float: right;
+}
+
+.album-logo img {
+  width: 100%;
+}
+
+/* .album {
   height: 430px;
   width: 60%;
   display: flex;
@@ -148,30 +156,34 @@ img:hover {
 }
 
 .album-text {
-  text-align: center;
-  font-family: "Schoolbell", cursive;
-  font-size: 50px;
+  font-size: 30px;
   color: #1c2938;
-}
+} */
 
 footer {
   margin-top: 40px;
-  flex: 0 0 auto;
   text-align: center;
   background-color: #1c2938;
-  font-family: "Schoolbell", cursive;
   font-size: 25px;
   color: #ff9f85;
 }
 
-.copyright {
+/* .copyright {
   padding: 10px;
   margin-block-end: 0em;
+} */
+
+/* .album-img {
+  max-width: 400px;
+  max-height: 400px;
+} */
+
+.custom-toggler.navbar-toggler {
+  border-color: #ff9c91;
 }
 
-.album-img {
-  width: 430px;
-  height: 430px;
+.custom-toggler .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='#ff9c91' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
 }
 
 @keyframes logo-animation {
@@ -184,7 +196,7 @@ footer {
       transform: translateX(0px);
     }
 }
-
+/*
 @keyframes img-scale {
     from {
         transform: scale(1);
@@ -195,28 +207,27 @@ footer {
     to {
         transform: scale(1);
     }
-}
+} */
 
 @keyframes header-li-animation {
-    from {
+    0% {
       opacity: 0;
       transform: translateY(-100px);
     }
-    to {
+    100% {
       opacity: 1;
       transform: translateY(0px);
     }
 }
 
-@keyframes admin-animation {
-    from {
-      opacity: 0;
-      transform: translateX(100px);
-    }
-    to {
-      opacity: 1;
-      transform: translateX();
-    }
+@media screen and (max-width: 768px) {
+  body {
+    font-size: 0.8em;
+  }
+
+  .float-right {
+    width: 65%;
+  }
 }
 
 /* color: #ff9f85; */
