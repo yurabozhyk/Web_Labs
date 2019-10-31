@@ -10,6 +10,8 @@
 
   <link rel="stylesheet" type="text/css" href="css/general.css">
   <link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah|Kalam|Gochi+Hand|Schoolbell&display=swap" rel="stylesheet">
+
+  <script src="js/fans_appeal.js"></script>
 </head>
 
 <body>
@@ -119,16 +121,16 @@
       </div>
     </section>
     <hr class="fan-hr">
-    <section>
-      <div class="d-flex justify-content-center align-items-end appeal-form">
-        <button type="submit" class="btn btn-blue btn-appeal mr-3">$end</button>
-        <textarea name="fans-appeal" rows="8" cols="80" placeholder="leave an appeal..." class="form-control" style="width: 500px;"></textarea>
-      </div>
+    <h3>Leave your appeal</h3>
+    <section class="d-flex justify-content-center align-items-end appeal-form">
+        <button type="submit" class="btn btn-blue btn-appeal mr-3" onclick="sendAppeal()">$end</button>
+        <textarea name="fans-appeal" id="appeal" rows="8" cols="80" placeholder="text here..." class="form-control" style="width: 500px;"></textarea>
     </section>
   </main>
     <footer class="sticky-footer py-2">
       <p style="text-align: center">copyright © 2019 &emsp; all right$ reserved</p>
     </footer>
+
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>

@@ -56,14 +56,14 @@
     <h1 class="p-2">admin</h1>
     <section>
       <div class="admin-flex m-3 justify-content-center">
-        <input type="file" name="image" class="form-control-file" style="width: 300px; max-width: 100%;">
+        <input type="file" name="image" class="form-control-file" style="width: 300px; max-width: 100%;" id="admin-photo">
         <img src="images/no-image1.png" alt="no image" class="float-right img-thumbnail">
       </div>
       <div class="admin-flex m-3">
-        <button type="submit" class="btn btn-blue mr-4">Publish</button>
+        <button type="submit" class="btn btn-blue mr-4" onclick="sendPost()">Publish</button>
         <div>
-          <input type="title" class="form-control" placeholder="new$ title" size="50"><br>
-          <textarea name="name" rows="15" cols="150" class="form-control" placeholder="new$ body"></textarea>
+          <input type="title" class="form-control" placeholder="new$ title" size="50" id="admin-title"><br>
+          <textarea name="name" rows="15" cols="150" class="form-control" placeholder="new$ body" id="admin-text"></textarea>
         </div>
       </div>
     </section>
@@ -71,7 +71,7 @@
   <footer class="sticky-footer py-2">
     <p style="text-align: center">copyright © 2019 &emsp; all right$ reserved</p>
   </footer>
-
+  <script src="js/admin.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
