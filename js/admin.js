@@ -16,7 +16,7 @@ function sendPost() {
     text.style.outline = 'none';
   }
 
-  if (title.trim() != "" && textValue.trim() != "" && image.trim() != "") {
+  if (title.value.trim() != "" && text.value.trim() != "") {
     alert('Post has been added!')
 
     title.value = '';
