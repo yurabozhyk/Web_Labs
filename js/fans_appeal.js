@@ -1,3 +1,34 @@
+var allAppeals = [];
+document.addEventListener('DOMContentLoaded', function(){
+
+  window.addEventListener('online', function() {
+    if(localStorage.getItem('appeals')) {
+      allAppeals = JSON.parse(localStorage.getItem('appeals'));
+      for(i=0;i<allAppeals.length;i++) {
+        sendAppeal(allAppeals[i].appeal_text);
+      }
+      localStorage.setItem('appeals', JSON.stringify([]));
+    }
+  });
+
+  document.getElementById('send').addEventListener('click', function() {
+    var appeal_text = document.getElementById('appeal').value.trim();
+    if(appeal_text === '') {
+      alert("Fill the fields!");
+    } else {
+      if(window.navigator.onLine) {
+        alert('Working with server...');
+        sendAppeal(appeal_text);
+        localStorage.setItem('appeals', JSON.stringify([]));
+      } else {
+        allAppeals.push({appeal_text:appeal_text});
+        localStorage.setItem('appeals', JSON.stringify(allAppeals));
+      }
+      document.getElementById('appeal').value = '';
+    }
+  });
+});
+
 function createAppeal(text, isHeader) {
   var card = document.createElement('div');
   card.className = 'card card-appeal ';
@@ -21,8 +52,7 @@ function formatDate(num) {
   return '' + num;
 }
 
-function sendAppeal() {
-  var text = document.getElementById('appeal').value;
+function sendAppeal(text) {
   if (text.trim() == '') {
     alert('Appeal can not be empty!');
   }

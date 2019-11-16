@@ -1,3 +1,7 @@
+var news = [];
+if(localStorage.getItem('news')) {
+  news = JSON.parse(localStorage.getItem('news'));
+}
 function sendPost() {
   var title = document.getElementById('admin-title')
   var text = document.getElementById('admin-text')
@@ -17,11 +21,16 @@ function sendPost() {
   }
 
   if (title.value.trim() != "" && text.value.trim() != "") {
-    alert('Post has been added!')
-
+    // alert('Post has been added!')
+    news.push({title:title.value, text:text.value});
+    if(window.navigator.onLine) {
+      alert('Working with server...');
+      localStorage.setItem('news', JSON.stringify(news));
+    } else {
+      localStorage.setItem('news', JSON.stringify(news));
+    }
     title.value = '';
     text.value = '';
-    image.value = '';
 
   } else {
     alert('Fill all the fields!')
