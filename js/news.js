@@ -1,24 +1,20 @@
+var storage;
+
 document.addEventListener("DOMContentLoaded", function() {
-  if(!window.navigator.onLine) {
-    alert("Latest news are not available...");
-    window.addEventListener('online', function() {
-      if(localStorage.getItem('news')) {
-        var allNews = JSON.parse(localStorage.getItem('news'));
-        for(i=0;i<allNews.length;i++) {
-          postNews(allNews[i].title, allNews[i].text);
+  storage = new Provider();
+  window.addEventListener('online', function() {
+    storage.provider.get('news', function(data) {
+      if (data) {
+        for (i = 0; i < data.length; i++) {
+          postNews(data[i].title, data[i].body);
         }
-        localStorage.setItem('news', JSON.stringify([]));
+        storage.provider.delete('news');
+        news = [];
+        // Data Transfer function
+        console.log('News successfuly transfered from provider to server!');
       }
     });
-  } else {
-    if(localStorage.getItem('news')) {
-      var allNews = JSON.parse(localStorage.getItem('news'));
-      for(i=0;i<allNews.length;i++) {
-        postNews(allNews[i].title, allNews[i].text);
-      }
-      localStorage.setItem('news', JSON.stringify([]));
-    }
-  }
+  });
 });
 
 function postNews(titleVar, textVar) {

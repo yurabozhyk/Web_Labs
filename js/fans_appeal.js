@@ -1,14 +1,19 @@
-var allAppeals = [];
-document.addEventListener('DOMContentLoaded', function(){
+var storage;
+
+ document.addEventListener('DOMContentLoaded', function(){
+   storage = new Provider();
 
   window.addEventListener('online', function() {
-    if(localStorage.getItem('appeals')) {
-      allAppeals = JSON.parse(localStorage.getItem('appeals'));
-      for(i=0;i<allAppeals.length;i++) {
-        sendAppeal(allAppeals[i].appeal_text);
+    storage.provider.get('appeals', function(data) {
+      if (data) {
+        for (i = 0; i < data.length; i++) {
+          sendAppeal(data[i].text);
+        }
+        storage.provider.delete('appeals');
+        appeals = [];
+        console.log('SERVER');
       }
-      localStorage.setItem('appeals', JSON.stringify([]));
-    }
+    });
   });
 
   document.getElementById('send').addEventListener('click', function() {
@@ -19,10 +24,19 @@ document.addEventListener('DOMContentLoaded', function(){
       if(window.navigator.onLine) {
         alert('Working with server...');
         sendAppeal(appeal_text);
-        localStorage.setItem('appeals', JSON.stringify([]));
       } else {
-        allAppeals.push({appeal_text:appeal_text});
-        localStorage.setItem('appeals', JSON.stringify(allAppeals));
+        storage.provider.get('appeals', function(data) {
+           var appeals
+           if (data) {
+             appeals = data;
+           }
+           else {
+             appeals = [];
+           }
+           appeals.push({name:name, text: appeal_text});
+           storage.provider.add('appeals', appeals);
+           console.log("PROVIDER");
+         });
       }
       document.getElementById('appeal').value = '';
     }
