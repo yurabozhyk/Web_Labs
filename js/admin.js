@@ -21,7 +21,6 @@ function sendPost() {
 
     title.value = '';
     text.value = '';
-    image.value = '';
 
   } else {
     alert('Fill all the fields!')
