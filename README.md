@@ -1,7 +1,6 @@
 # Web_Labs
 ## Site about "bbno$" band
-*************
-## How to install and run site:
+### How to install and run site:
 1. Clone this repository.
 2. Install Node.js.
 3. Install packages for this project using ```npm install``` command in cmd or terminal in project folder.
