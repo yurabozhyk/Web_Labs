@@ -3,7 +3,6 @@ var bodyParser = require('body-parser');
 var mongoClient = require('mongodb').MongoClient;
 var app = express();
 
-
 app.use('/', express.static('.'));
 app.use(bodyParser.json());
 
@@ -40,6 +39,40 @@ app.post('/fans_appeal', function (req, res) {
   res.send();
 });
 
+app.put('/fans_appeal', function (req, res) {
+    mongoClient.connect(url, function (err, db) {
+        if (err) {
+            throw err;
+        }
+
+        if (req.body) {
+            let dbo = db.db("web_labs");
+            dbo.collection("fans_appeal").update(req.body, function(err, res) {
+                if (err) throw err;
+                db.close();
+            });
+        }
+    });
+    res.send();
+});
+
+app.delete('/fans_appeal', function (req, res) {
+    mongoClient.connect(url, function (err, db) {
+        if (err) {
+            throw err;
+        }
+
+        if (req.body) {
+            let dbo = db.db("web_labs");
+            dbo.collection("fans_appeal").remove(req.body, function(err, res) {
+                if (err) throw err;
+                db.close();
+            });
+        }
+    });
+    res.send();
+});
+
 app.get('/news', function (req, res) {
   mongoClient.connect(url, function (err, db) {
     if (err) {
@@ -69,6 +102,40 @@ app.post('/news', function (req, res) {
     }
   });
   res.send();
+});
+
+app.put('/news', function (req, res) {
+    mongoClient.connect(url, function (err, db) {
+        if (err) {
+            throw err;
+        }
+
+        if (req.body) {
+            let dbo = db.db("web_labs");
+            dbo.collection("news").update(req.body, function(err, res) {
+                if (err) throw err;
+                db.close();
+            });
+        }
+    });
+    res.send();
+});
+
+app.delete('/news', function (req, res) {
+    mongoClient.connect(url, function (err, db) {
+        if (err) {
+            throw err;
+        }
+
+        if (req.body) {
+            let dbo = db.db("web_labs");
+            dbo.collection("news").remove(req.body, function(err, res) {
+                if (err) throw err;
+                db.close();
+            });
+        }
+    });
+    res.send();
 });
 
 app.listen(5000, function () {

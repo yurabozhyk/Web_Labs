@@ -10,51 +10,55 @@ function sendPost() {
 
   if (title.value.trim() == '') {
     title.style.outline = '3px solid red';
-  }
-  else {
+  } else {
     title.style.outline = 'none';
   }
 
   if (text.value.trim() == '') {
     text.style.outline = '3px solid red';
-  }
-  else {
+  } else {
     text.style.outline = 'none';
   }
 
   if (title.value.trim() != "" && text.value.trim() != "") {
-    if(window.navigator.onLine) {
+    var obj = {title : title.value, text : text.value};
+
+    if (window.navigator.onLine) {
       alert('Working with server...');
-      storage.provider.get('news', function(data) {
-         var news;
-         if (data) {
-           news = data;
-         }
-         else {
-           news = [];
-         }
-         news.push({title : title.value, body : text.value});
-         storage.provider.add('news', news);
-         console.log("PROVIDER");
-         title.value = '';
-         text.value = '';
-       });
-      } else {
-        storage.provider.get('news', function(data) {
-          var news;
-          if (data) {
-            news = data;
+      var req = new XMLHttpRequest();
+      req.open("POST", "/news", true);
+      req.setRequestHeader('Content-Type', 'application/json');
+      req.send(JSON.stringify(obj));
+
+      req.onreadystatechange = function() {
+        if (req.readyState === XMLHttpRequest.DONE) {
+          if (req.status != 200) {
+            alert("Error");
+          } else {
+            alert("Success!");
           }
-          else {
-            news = [];
-          }
-          news.push({title : title.value, body : text.value});
-          storage.provider.add('news', news);
-          console.log("PROVIDER");
-          title.value = '';
-          text.value = '';
-        });
+        }
       }
+      title.value = '';
+      text.value = '';
+    } else {
+      storage.provider.get('news', function(data) {
+        var news;
+        if (data) {
+          news = data;
+        } else {
+          news = [];
+        }
+        news.push({
+          title: title.value,
+          body: text.value
+        });
+        storage.provider.add('news', news);
+        console.log("PROVIDER");
+        title.value = '';
+        text.value = '';
+      });
+    }
   } else {
     alert('Fill all the fields!')
   }
