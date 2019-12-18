@@ -1,5 +1,5 @@
 # Web_Labs
-## Site about "bbno$" band
+## Site about "bbno$"
 ### How to install and run site:
 1. Clone this repository.
 2. Install Node.js.
