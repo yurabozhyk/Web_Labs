@@ -1,38 +1,61 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>bbno$</title>
-    <link rel="stylesheet" type="text/css" href="css/index.css">
-    <link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah|Kalam|Gochi+Hand|Schoolbell&display=swap" rel="stylesheet">
-  </head>
-  <body>
-    <header>
-      <nav>
-        <ul>
-          <li class="logo"><a href="index.html">bbno$</a></li>
-          <li><a href="index.html">main</a></li>
-          <li><a href="#">new$</a></li>
-          <li>
-            <div class="dropdown">
-              <button class="dropbtn">for fan$</button>
-              <div class="dropdown-content">
-                <a href="#">fan club</a>
-                <a href="#">tour $chedule</a>
-                <a href="#">lyric$</a>
-                <a href="#">bbnomerch</a>
-              </div>
+<html manifest="cache.manifest">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>bbno$</title>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+  <link rel="stylesheet" type="text/css" href="css/general.css">
+  <link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah|Kalam|Gochi+Hand|Schoolbell&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <header class="sticky-top">
+    <nav class="navbar navbar-expand-lg">
+      <a href="templates/index.html" class="navbar-brand">bbno$</a>
+
+      <button class="navbar-toggler custom-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse justify-content-center" id="collapsibleNavbar">
+        <ul class="navbar-nav text-center d-flex align-items-center">
+          <li class="nav-item" class="nav-link">
+            <a href="index.html">main</a>
+          </li>
+          <li class="nav-item">
+            <a href="news.html">new$</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">for fan$</a>
+            <div class="dropdown-menu">
+              <a href="#" class="dropdown-item">fan club</a>
+              <a href="tour_schedule.html" class="dropdown-item">tour $chedule</a>
+              <a href="#" class="dropdown-item">lyric$</a>
+              <a href="#" class="dropdown-item">bbnomerch</a>
             </div>
           </li>
-          <li><a href="#">fan$ appeal</a></li>
-          <li><a href="concert.html">concert venue</a></li>
-          <li class="admin"><a href="#">admin</a></li>
+          <li class="nav-item" class="nav-link">
+            <a href="fans_appeal.html">fan$ appeal</a>
+          </li>
+          <li class="nav-item" class="nav-link">
+            <a href="concert.html">concert venue</a>
+          </li>
+          <li class="nav-item admin" class="nav-link">
+            <a href="admin.html">admin</a>
+          </li>
         </ul>
-     </header>
-    <main>
+      </div>
+    </nav>
+  </header>
+  <main>
+    <section>
       <div class="img-box">
         <div class="img-content">
-          <img src="images/bbnos9.jpg" alt="bbno$ and pink beanie"  style="width:100%">
+          <img src="images/bbnos9.jpg" alt="bbno$ and pink beanie" style="width:100%">
         </div>
         <div class="img-content">
           <img src="images/bbnos1.jpg" alt="bbno$ is posing" style="width:100%">
@@ -41,16 +64,39 @@
           <img src="images/bbnos3.jpg" alt="b&w bbno$" style="width:100%">
         </div>
       </div>
-      <div class="bio">
-        <p>bbno$ doesn’t pull any punches. When it comes to his music, it’s all fun and games. And his lack of self seriousness is seriously refreshing. Born in Vancouver as Alexander Gumuchian, bbno$ is currently based in Kelowna – deep in the interior of British Columbia. He’s finishing up a degree in Kinesiology but he doesn’t plan on using it. As he puts it: “I told my academic advisor my post-grad plan is ‘fuck school, I’m gonna be a rapper forever’.” He is best known for his and Y2K’s 2019 single “Lalala” and his associations with Yung Gravy. Gumuchian has over 18 million monthly streamers on Spotify as of September 2019.</p>
+    </section>
+    <section>
+      <h3>
+        about bbno$
+      </h3>
+      <div class="bio mw-870px">
+        <p>
+          bbno$ doesn’t pull any punches. When it comes to his music, it’s all fun and games. And his lack of self seriousness is seriously refreshing. Born in Vancouver as Alexander Gumuchian, bbno$ is currently based in Kelowna – deep in the
+          interior of British Columbia. He’s finishing up a degree in Kinesiology but he doesn’t plan on using it. As he puts it: “I told my academic advisor my post-grad plan is ‘fuck school, I’m gonna be a rapper forever’.” He is best known for his
+          and Y2K’s 2019 single “Lalala” and his associations with Yung Gravy. Gumuchian has over 18 million monthly streamers on Spotify as of September 2019.
+        </p>
       </div>
-      <div class="album">
-        <p class="album-text">best album<br><br>Y2K & bbno$<br>"Lalala" - Single</p>
-          <a href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=1&cad=rja&uact=8&ved=2ahUKEwiFlqeHoOnkAhWDyqYKHZtiASsQyCkwAHoECBMQBQ&url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DX_nJ5ksFVbg&usg=AOvVaw1BHDUwDkmerS8MxZIDr7ST"><img class="album-img" src="images/album_lalala.jpg" alt="best album - 'Lalala' - single"></a>
+    </section>
+    <section style="overflow: auto; position:relative;">
+      <!-- <div class="album-flex justify-content-center align-items-center"> -->
+      <div class="d-flex justify-content-center align-items-center">
+        <div>
+          <h3 class="album-name">be$t album<br>Y2k & bbno$<br>"Lalala" - Single</h3>
+        </div>
+        <div class="album-logo">
+          <img src="images/album_lalala.jpg" alt="best album - 'Lalala' - single" style="padding-left: 20px">
+        </div>
       </div>
-    </main>
-    <footer>
-      <p class="copyright">copyright © 2019 &emsp; all right$ reserved</p>
-    </footer>
-  </body>
+    </section>
+  </main>
+
+  <footer class="sticky-footer py-2">
+    <p style="text-align: center">copyright © 2019 &emsp; all right$ reserved</p>
+  </footer>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+
 </html>

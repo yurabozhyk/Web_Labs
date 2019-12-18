@@ -1,0 +1,375 @@
+body {
+  background-color: #ff9c91;
+  margin: auto 50px;
+  font-family: "Schoolbell", cursive;
+}
+
+p {
+  text-align: justify;
+}
+
+nav {
+  background-color: #1c2938;
+}
+
+h1 {
+  text-align: center;
+  color: #1c2938;
+  font-size: 70px;
+}
+
+h3 {
+  text-align: center;
+  color: #1c2938;
+  font-size: 50px;
+}
+
+li {
+  font-size: 40px;
+  animation-name: header-li-animation;
+  animation-duration: .8s;
+}
+
+nav li a {
+  display: block;
+  padding: 21.5px;
+  min-width: 120px;
+  text-decoration: none;
+  text-align: center;
+  font-size: 30px;
+  color: #ff9c91;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+.dropdown  {
+  display: block;
+  float: left;
+  vertical-align: middle;
+  padding: 14px 16px;
+  min-width: 120px;
+  text-decoration: none;
+  text-align: center;
+}
+
+.navbar-brand {
+  padding: 21.5px;
+  min-width: 120px;
+  text-decoration: none;
+  text-align: center;
+  font-size: 30px;
+  color: #ff9c91;
+  animation-name: logo-animation;
+  animation-fill-mode: both;
+  animation-duration: .8s;
+}
+
+nav a:hover, .dropdown:hover .dropbtn  {
+  color: #ffd5c9;
+}
+
+.dropdown-menu {
+  background-color: #1c2938;
+}
+
+.dropdown-menu a {
+  text-align: left;
+  color: #ff9c91;
+}
+
+.dropdown-menu a:hover {
+  color: #ffd5c9;
+  background-color: inherit;
+}
+
+.dropdown:active .dropdown-menu {
+  display: block;
+}
+
+.img-content {
+  float: left;
+  width: 33.33%;
+  padding: 3px;
+}
+
+img:hover {
+  animation-name: img-scale;
+  animation-duration: 1s;
+  animation-fill-mode: backwards;
+  animation-timing-function: ease-in-out;
+}
+
+.bio {
+  margin: auto;
+  text-align: justify;
+  font-size: 25px;
+  color: #1c2938;
+}
+
+.album-name {
+  display: block;
+  width: 100%;
+  float: left;
+  margin: 0;
+}
+
+.album-logo {
+  display: block;
+  width: 50%;
+  margin: 0px;
+  float: right;
+}
+
+.album-logo img {
+  width: 100%;
+}
+
+/* .album {
+  height: 430px;
+  width: 60%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: auto;
+} */
+
+.upcoming-concert {
+  font-size: 60px;
+  color: #1c2938;
+}
+
+.concert-info {
+  font-size: 40px;
+  font-weight: bold;
+  color: #1c2938;
+}
+
+.concert-contacts {
+  color: #1c2938;
+  font-size: 20px;
+}
+
+.buy-button {
+  border: none;
+  border-radius: 5px;
+  margin-top: 30px;
+  padding: 20px;
+  color: #ff9c91;
+  background-color: #1c2938;
+  font-size: 50px;
+  text-align: center;
+  text-decoration: none;
+  transition-duration: 0.5s;
+  cursor: pointer;
+}
+
+span {
+  display: block;
+}
+
+.buy-button:hover {
+  color: #ffd5c9;
+  border-radius: 40px;
+}
+
+a {
+  text-decoration: none;
+  color: #cd3f3e;
+}
+
+a:hover {
+  color: #d95c5b;
+}
+
+.card {
+  background-color:#1c2938;
+  color: #ff9c91;
+}
+
+.card-news {
+  max-width: 250px;
+  margin: 0 auto;
+}
+
+.admin-flex {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: row;
+}
+
+.admin-flex img {
+  width: 500px;
+  max-width: 50%;
+}
+
+.btn-blue {
+  background-color:#1c2938;
+  color: #ff9c91;
+}
+
+.btn-blue:hover {
+  color: #ffd5c9;
+}
+
+input[type="text"], textarea {
+  max-width: 100%;
+}
+
+.tour-bg {
+  max-width: 100%;
+  margin: auto;
+}
+
+table {
+  font-size: 30px;
+  text-align: center;
+  table-layout: fixed;
+}
+
+tbody {
+  color: #1c2938;
+}
+
+.thead-blue{
+  background-color: #1c2938;
+  color: #ff9c91;
+}
+
+.fan-hr {
+  border: 2px solid #1c2938;
+}
+
+.card-appeal .card-body {
+  border: 1px solid #1c2938;
+}
+
+.card-appeal {
+  background-color: #ff9c91;
+  color: #1c2938;
+}
+
+.btn-appeal {
+  height: 50px;
+  width: 100px;
+  border-radius: 5px;
+  font-size: 20px;
+}
+
+footer {
+  margin-top: 40px;
+  text-align: center;
+  background-color: #1c2938;
+  font-size: 25px;
+  color: #ff9c91;
+}
+
+.custom-toggler.navbar-toggler {
+  border-color: #ff9c91;
+}
+
+.custom-toggler .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='#ff9c91' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+
+@keyframes logo-animation {
+    from {
+      opacity: 0;
+      transform: translateX(-100px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0px);
+    }
+}
+
+@keyframes header-li-animation {
+    0% {
+      opacity: 0;
+      transform: translateY(-100px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0px);
+    }
+}
+
+@media screen and (max-width: 992px) {
+  body {
+    font-size: 0.8em;
+  }
+
+  .float-right {
+    width: 65%;
+  }
+
+  table {
+    font-size: 1.2em;
+  }
+
+  h1 {
+    font-size: 1.7em;
+  }
+  
+  .news-card {
+    max-width: 350px;
+  }
+
+  .card-appeal {
+    margin-bottom: 10px;
+    float: none;
+  }
+
+  .admin-flex {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+
+  .admin-flex button, .admin-flex input[type="file"] {
+    margin-top: 20px;
+  }
+
+  .admin-flex img {
+    max-width: 70%;
+  }
+
+  .album-name {
+    font-size: 3vw;
+  }
+
+  .appeal-form {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+
+  .btn-appeal {
+    margin-right: 0px;
+    margin-top: 10px;
+  }
+}
+
+
+/*
+@keyframes img-scale {
+    from {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(0.8);
+    }
+    to {
+        transform: scale(1);
+    }
+} */
+
+/* .dropdown .dropbtn {
+  font-size: 30px;
+  border: none;
+  color: #ff9c91;
+  padding: 12px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+} */

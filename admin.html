@@ -3,13 +3,12 @@
 
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>bbno$ - concert venue</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>bbno$ - admin</title>
 
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 
   <link rel="stylesheet" type="text/css" href="css/general.css">
-  <!-- <link rel="stylesheet" type="text/css" href="css/concert.css"> -->
   <link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah|Kalam|Gochi+Hand|Schoolbell&display=swap" rel="stylesheet">
 </head>
 
@@ -53,35 +52,27 @@
     </nav>
   </header>
   <main>
-    <div class="p-3 text-center">
-      <div class="p-4 upcoming-concert">
-        Upcoming concert<br>
-        Thursday<br>
-        26 September 2019
+    <h1 class="p-2">admin</h1>
+    <section>
+      <div class="admin-flex m-3 justify-content-center">
+        <input type="file" name="image" class="form-control-file" style="width: 300px; max-width: 100%;" id="admin-photo">
+        <img src="images/no-image1.png" alt="no image" class="float-right img-thumbnail">
       </div>
-      <div class="p-4">
-        <a href="https://www.google.com/maps/place/8656+Colesville+Rd,+Silver+Spring,+MD+20910,+Сполучені+Штати+Америки/data=!4m2!3m1!1s0x89b7c8ba01f21fd9:0xffb1eae707f5dd5b?sa=X&ved=2ahUKEwjm6vPilunkAhVExcQBHZJUBXAQ8gEwAHoECBQQAQ">
-          <img class="concert-img" src="images/concert-loc.png" alt="Location of concert" width="600px" height="500px">
-        </a>
-      </div>
-      <div class="concert-info">
-        <div class="concert-contacts">
-          <span>Location: <a
-              href="https://    www.google.com/maps/place/8656+Colesville+Rd,+Silver+Spring,+MD+20910,+Сполучені+Штати+Америки/data=!4m2!3m1!1s0x89b7c8ba01f21fd9:0xffb1eae707f5dd5b?sa=X&ved=2ahUKEwjm6vPilunkAhVExcQBHZJUBXAQ8gEwAHoECBQQAQ">8656
-              Colesville Road, Silver Spring, MD 20910</a>
-          </span>
-          <span>Phone: (301) 960-9999</span>
-          <a href="fillmoresilverspring.com">fillmoresilverspring.com</a>
+      <div class="admin-flex m-3">
+        <button type="submit" class="btn btn-blue mr-4" onclick="sendPost()">Publish</button>
+        <div>
+          <input type="title" class="form-control" placeholder="new$ title" size="50" id="admin-title"><br>
+          <textarea name="name" rows="15" cols="150" class="form-control" placeholder="new$ body" id="admin-text"></textarea>
         </div>
-        <form action="https://www.songkick.com/concerts/38311809-yung-gravy-at-fillmore-silver-spring">
-          <button class="buy-button">Buy ticket$</button>
-        </form>
       </div>
-    </div>
+    </section>
   </main>
   <footer class="sticky-footer py-2">
     <p style="text-align: center">copyright © 2019 &emsp; all right$ reserved</p>
   </footer>
+  <script src="js/admin.js"></script>
+  <script src="js/db.js"></script>
+
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
